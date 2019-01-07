@@ -1,24 +1,32 @@
+package Frame;
+
 import javax.swing.*;
 import java.awt.*;
 
-public class Frame extends JPanel implements Runnable {
+import Config.Config;
+
+public class Panel extends JPanel {
 
     private JFrame frame;
     private int[] array;
-    private int interval;
 
-    public Frame(int width, int height, int interval) {
+    public Panel() {
         frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setTitle("Visual sorting");
-        frame.setSize(width, height);
+        frame.setSize(Config.FRAME_WIDTH, Config.FRAME_HEIGHT);
         frame.getContentPane().add(this);
         frame.setVisible(true);
-        this.interval = interval;
     }
 
     // Update array & repaint
     public void update(int[] array) {
+        // Delay
+        try {
+            Thread.sleep(Config.SLEEP_MILLIS, 1);
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
         this.array = array;
         frame.repaint();
     }
@@ -26,14 +34,8 @@ public class Frame extends JPanel implements Runnable {
     // draw a rectangle for every element in the array
     @Override
     public void paint(Graphics g) {
-        for(int i = 0; i < array.length; i++) {
-            g.fillRect(i * interval, 0, interval, array[i]);
-        }
-    }
-
-    @Override
-    public void run() {
-
+        for (int i = 0; i < array.length; i++)
+            g.fillRect(i * Config.ELEMENT_WIDTH, this.getHeight() - array[i], Config.ELEMENT_WIDTH, array[i]);
     }
 
 }
