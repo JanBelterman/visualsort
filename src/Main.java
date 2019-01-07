@@ -1,5 +1,4 @@
 import Frame.Panel;
-import Sorting_algorithms.MergeSort;
 
 public class Main {
 
@@ -8,14 +7,14 @@ public class Main {
     public static void main(String[] args) {
         panel = new Panel();
 
-//        Sorting_algorithms.SelectionSort selectionSort = new Sorting_algorithms.SelectionSort(panel);
-//        selectionSort.run();
+        Sorting_algorithms.SelectionSort selectionSort = new Sorting_algorithms.SelectionSort(panel);
+        selectionSort.run();
 
 //        Sorting_algorithms.BubbleSort bubbleSort = new Sorting_algorithms.BubbleSort(panel);
 //        bubbleSort.run();
 
-        MergeSort mergeSort = new MergeSort(panel);
-        mergeSort.run();
+//        MergeSort mergeSort = new MergeSort(panel);
+//        mergeSort.run();
 
     }
 

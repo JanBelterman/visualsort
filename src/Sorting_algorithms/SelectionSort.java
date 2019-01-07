@@ -12,7 +12,7 @@ public class SelectionSort {
     public SelectionSort(Panel panel) {
         this.panel = panel;
         Config.ELEMENT_WIDTH = 1;
-        Config.SLEEP_MILLIS = 1;
+        Config.SLEEP_MILLIS = 2;
         this.array = Util.generateArray(panel.getWidth(), Config.FRAME_HEIGHT, Config.ELEMENT_WIDTH);
     }
 

@@ -11,7 +11,7 @@ public class MergeSort {
 
     public MergeSort(Panel panel) {
         this.panel = panel;
-        Config.ELEMENT_WIDTH = 5;
+        Config.ELEMENT_WIDTH = 2;
         Config.SLEEP_MILLIS = 1;
         this.array = Util.generateArray(panel.getWidth(), Config.FRAME_HEIGHT, Config.ELEMENT_WIDTH);
     }
