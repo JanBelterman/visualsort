@@ -17,12 +17,13 @@ public class Frame extends JPanel implements Runnable {
         this.interval = interval;
     }
 
+    // Update array & repaint
     public void update(int[] array) {
         this.array = array;
-//        repaint();
         frame.repaint();
     }
 
+    // draw a rectangle for every element in the array
     @Override
     public void paint(Graphics g) {
         for(int i = 0; i < array.length; i++) {
