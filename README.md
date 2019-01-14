@@ -1,2 +1,2 @@
 # Introduction
-A visualization of the selectionsort algorithm.
+A visualization of various sorting algorithms.
