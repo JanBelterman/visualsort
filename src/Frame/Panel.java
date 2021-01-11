@@ -7,6 +7,8 @@ import Config.Config;
 
 public class Panel extends JPanel {
 
+    private static final long serialVersionUID = 4236119898795955335L;
+
     private JFrame frame;
     private int[] array;
 

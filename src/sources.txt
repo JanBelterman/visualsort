@@ -1,0 +1,9 @@
+C:\Users\janbe\projects\java\Visualsort\src\Main.java
+C:\Users\janbe\projects\java\Visualsort\src\Config\Algorithm.java
+C:\Users\janbe\projects\java\Visualsort\src\Config\Config.java
+C:\Users\janbe\projects\java\Visualsort\src\Frame\Panel.java
+C:\Users\janbe\projects\java\Visualsort\src\Sorting_algorithms\BubbleSort.java
+C:\Users\janbe\projects\java\Visualsort\src\Sorting_algorithms\MergeSort.java
+C:\Users\janbe\projects\java\Visualsort\src\Sorting_algorithms\SelectionSort.java
+C:\Users\janbe\projects\java\Visualsort\src\Sorting_algorithms\SortingAlgorithm.java
+C:\Users\janbe\projects\java\Visualsort\src\Util\Util.java

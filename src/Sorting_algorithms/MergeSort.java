@@ -4,7 +4,7 @@ import Frame.Panel;
 import Util.Util;
 import Config.Config;
 
-public class MergeSort {
+public class MergeSort implements SortingAlgorithm {
 
     private Panel panel;
     private int[] array;

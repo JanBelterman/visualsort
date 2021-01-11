@@ -4,7 +4,7 @@ import Frame.Panel;
 import Util.Util;
 import Config.Config;
 
-public class SelectionSort {
+public class SelectionSort implements SortingAlgorithm {
 
     private Panel panel;
     private int[] array;
