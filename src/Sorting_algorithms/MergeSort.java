@@ -1,19 +1,11 @@
 package Sorting_algorithms;
 
 import Frame.Panel;
-import Util.Util;
-import Config.Config;
 
-public class MergeSort implements SortingAlgorithm {
-
-    private Panel panel;
-    private int[] array;
+public class MergeSort extends SortingAlgorithm {
 
     public MergeSort(Panel panel) {
-        this.panel = panel;
-        Config.ELEMENT_WIDTH = 2;
-        Config.SLEEP_MILLIS = 1;
-        this.array = Util.generateArray(panel.getWidth(), Config.FRAME_HEIGHT, Config.ELEMENT_WIDTH);
+        super(panel);
     }
 
     public void run() {
@@ -34,7 +26,7 @@ public class MergeSort implements SortingAlgorithm {
             merge(array, left, middle, right);
         }
     }
-    private void merge(int arr[], int left, int middle, int right) {
+    private void merge(int[] arr, int left, int middle, int right) {
         // Find sizes of two sub-arrays to be merged
         int n1 = middle - left + 1;
         int n2 = right - middle;

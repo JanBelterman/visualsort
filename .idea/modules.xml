@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/VisualSorting.iml" filepath="$PROJECT_DIR$/VisualSorting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Visualsort.iml" filepath="$PROJECT_DIR$/Visualsort.iml" />
     </modules>
   </component>
 </project>

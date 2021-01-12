@@ -1,19 +1,11 @@
 package Sorting_algorithms;
 
 import Frame.Panel;
-import Util.Util;
-import Config.Config;
 
-public class BubbleSort implements SortingAlgorithm {
-
-    private Panel panel;
-    private int[] array;
+public class BubbleSort extends SortingAlgorithm {
 
     public BubbleSort(Panel panel) {
-        this.panel = panel;
-        Config.ELEMENT_WIDTH = 10;
-        Config.SLEEP_MILLIS = 1;
-        this.array = Util.generateArray(panel.getWidth(), Config.FRAME_HEIGHT, Config.ELEMENT_WIDTH);
+        super(panel);
     }
 
     // Run bubble sort algorithm

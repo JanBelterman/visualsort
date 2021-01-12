@@ -1,7 +1,24 @@
 package Sorting_algorithms;
 
-public interface SortingAlgorithm {
+import Config.Config;
+import Frame.Panel;
+import Generator.ArrayGenerator;
 
-    public void run();
-    
+public abstract class SortingAlgorithm {
+
+    protected int[] array;
+
+    protected Panel panel;
+
+    public SortingAlgorithm(Panel panel) {
+        this.panel = panel;
+        this.array = ArrayGenerator.generateArray(panel.getHeight(), Config.ARRAY_SIZE);
+    }
+
+    public abstract void run();
+
+    public int getCount() {
+        return array.length;
+    }
+
 }

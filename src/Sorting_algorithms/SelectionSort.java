@@ -1,19 +1,11 @@
 package Sorting_algorithms;
 
 import Frame.Panel;
-import Util.Util;
-import Config.Config;
 
-public class SelectionSort implements SortingAlgorithm {
-
-    private Panel panel;
-    private int[] array;
+public class SelectionSort extends SortingAlgorithm {
 
     public SelectionSort(Panel panel) {
-        this.panel = panel;
-        Config.ELEMENT_WIDTH = 1;
-        Config.SLEEP_MILLIS = 2;
-        this.array = Util.generateArray(panel.getWidth(), Config.FRAME_HEIGHT, Config.ELEMENT_WIDTH);
+        super(panel);
     }
 
     // Run selection sort algorithm
