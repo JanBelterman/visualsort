@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fae0e24f-a681-4902-b475-27de13e2525a" name="Default Changelist" comment="Added heapsort &amp; quicksort">
-      <change afterPath="$PROJECT_DIR$/src/Sorting_algorithms/HeapSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sorting_algorithms/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+    <list default="true" id="fae0e24f-a681-4902-b475-27de13e2525a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Frame/AlgorithmsBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Frame/ControlBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Frame/MenuBarCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Frame/SortingAlgorithmEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisualSorting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Visualsort.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frame/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame/Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting_algorithms/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorting_algorithms/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting_algorithms/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorting_algorithms/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting_algorithms/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorting_algorithms/SelectionSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sorting_algorithms/SortingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorting_algorithms/SortingAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sources.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sources.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +23,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -54,6 +54,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -68,15 +69,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,8 +96,17 @@
       <updated>1610387335765</updated>
       <workItem from="1610387338705" duration="47000" />
       <workItem from="1610387397130" duration="1711000" />
-      <workItem from="1610483512966" duration="2753000" />
+      <workItem from="1610483512966" duration="3104000" />
+      <workItem from="1610524180136" duration="7567000" />
     </task>
+    <task id="LOCAL-00001" summary="Added heapsort &amp; quicksort">
+      <created>1610486518624</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610486518624</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +122,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added heapsort &amp; quicksort" />

@@ -16,17 +16,7 @@ public class Panel extends JPanel {
 
     private int elementWidth;
 
-    private JFrame frame;
     private int[] array;
-
-    public Panel() {
-        frame = new JFrame();
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setTitle("Visual sorting");
-        frame.setSize(Config.FRAME_WIDTH, Config.FRAME_HEIGHT);
-        frame.getContentPane().add(this);
-        frame.setVisible(true);
-    }
 
     public void addSortingAlgorithm(SortingAlgorithm sortingAlgorithm) {
         elementWidth = calculateElementWidth(sortingAlgorithm.getCount(), Config.FRAME_WIDTH);
@@ -50,14 +40,17 @@ public class Panel extends JPanel {
             Thread.currentThread().interrupt();
         }
         this.array = array;
-        frame.repaint();
+        JFrame topFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        topFrame.repaint();
     }
 
     // draw a rectangle for every element in the array
     @Override
     public void paint(Graphics g) {
-        for (int i = 0; i < array.length; i++)
-            g.fillRect(i * elementWidth, this.getHeight() - array[i], elementWidth, array[i]);
+        if (this.array != null) {
+            for (int i = 0; i < array.length; i++)
+                g.fillRect(i * elementWidth, this.getHeight() - array[i], elementWidth, array[i]);
+        }
     }
 
     private int calculateElementWidth(int count, int width) {

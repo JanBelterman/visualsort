@@ -21,4 +21,8 @@ public abstract class SortingAlgorithm {
         return array.length;
     }
 
+    public void reset() {
+        this.array = ArrayGenerator.generateArray(panel.getHeight(), Config.ARRAY_SIZE);
+    }
+
 }
