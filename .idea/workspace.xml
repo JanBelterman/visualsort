@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fae0e24f-a681-4902-b475-27de13e2525a" name="Default Changelist" comment="Added controls to switch sorting algorithm and restart etc.">
-      <change afterPath="$PROJECT_DIR$/src/Sorting_algorithms/InsertionSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/AlgorithmsBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame/AlgorithmsBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/MenuBarCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame/MenuBarCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/SortingAlgorithmEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame/SortingAlgorithmEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +96,7 @@
       <workItem from="1610524180136" duration="7685000" />
       <workItem from="1611749768449" duration="105000" />
       <workItem from="1611755987719" duration="187000" />
-      <workItem from="1611829002236" duration="1451000" />
+      <workItem from="1611829002236" duration="1810000" />
     </task>
     <task id="LOCAL-00001" summary="Added heapsort &amp; quicksort">
       <created>1610486518624</created>
@@ -116,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610539001517</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added insertion sort">
+      <created>1611830767812</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611830767812</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +140,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added heapsort &amp; quicksort" />
     <MESSAGE value="Added controls to switch sorting algorithm and restart etc." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added controls to switch sorting algorithm and restart etc." />
+    <MESSAGE value="Added insertion sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added insertion sort" />
   </component>
 </project>

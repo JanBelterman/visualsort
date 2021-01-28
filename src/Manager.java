@@ -17,6 +17,10 @@ public class Manager implements MenuBarCallback {
 
     private Thread sortingThread;
 
+    // TODO: fix that when thread == null can't click on new algorithm.
+    // TODO: fix algorithm buttons don't always work right
+    // TODO: when state == paused (enum), change start button text to resume. State machine or something nice.
+
     public void run() {
         frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
