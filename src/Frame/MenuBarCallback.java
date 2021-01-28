@@ -1,7 +1,5 @@
 package Frame;
 
-import Sorting_algorithms.SortingAlgorithm;
-
 public interface MenuBarCallback {
 
     void onStart();

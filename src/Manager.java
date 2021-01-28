@@ -93,6 +93,7 @@ public class Manager implements MenuBarCallback {
             case MERGE_SORT -> new MergeSort(panel);
             case HEAP_SORT -> new HeapSort(panel);
             case QUICK_SORT -> new QuickSort(panel);
+            case INSERTION_SORT -> new InsertionSort(panel);
         };
 
         panel.update(new int[]{});

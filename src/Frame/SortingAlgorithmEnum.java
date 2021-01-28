@@ -6,6 +6,7 @@ public enum SortingAlgorithmEnum {
     BUBBLE_SORT,
     MERGE_SORT,
     HEAP_SORT,
-    QUICK_SORT
+    QUICK_SORT,
+    INSERTION_SORT
 
 }
