@@ -1,4 +1,4 @@
-package Sorting_algorithms;
+package SortingAlgorithms;
 
 import Config.Config;
 import Frame.Panel;

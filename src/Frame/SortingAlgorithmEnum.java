@@ -7,6 +7,7 @@ public enum SortingAlgorithmEnum {
     MERGE_SORT,
     HEAP_SORT,
     QUICK_SORT,
-    INSERTION_SORT
+    INSERTION_SORT,
+    SHELL_SORT
 
 }

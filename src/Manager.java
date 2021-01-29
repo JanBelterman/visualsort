@@ -4,7 +4,7 @@ import Frame.AlgorithmsBar;
 import Frame.Panel;
 import Frame.MenuBarCallback;
 import Frame.SortingAlgorithmEnum;
-import Sorting_algorithms.*;
+import SortingAlgorithms.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,6 +20,9 @@ public class Manager implements MenuBarCallback {
     // TODO: fix that when thread == null can't click on new algorithm.
     // TODO: fix algorithm buttons don't always work right
     // TODO: when state == paused (enum), change start button text to resume. State machine or something nice.
+    // TODO: fix slow after some runtime
+
+    // TODO: fix always one thread active
 
     public void run() {
         frame = new JFrame();
@@ -98,11 +101,10 @@ public class Manager implements MenuBarCallback {
             case HEAP_SORT -> new HeapSort(panel);
             case QUICK_SORT -> new QuickSort(panel);
             case INSERTION_SORT -> new InsertionSort(panel);
+            case SHELL_SORT -> new ShellSort(panel);
         };
 
         panel.update(new int[]{});
         frame.repaint();
-
-//        startSortingThread();
     }
 }

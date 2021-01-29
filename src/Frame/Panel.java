@@ -7,7 +7,7 @@ import java.awt.event.ComponentEvent;
 import java.io.Serial;
 
 import Config.Config;
-import Sorting_algorithms.SortingAlgorithm;
+import SortingAlgorithms.SortingAlgorithm;
 
 public class Panel extends JPanel {
 

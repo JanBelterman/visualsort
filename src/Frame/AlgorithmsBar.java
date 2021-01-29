@@ -10,7 +10,9 @@ public class AlgorithmsBar extends JPanel {
     private JButton bubbleSortBtn;
     private JButton mergeSortBtn;
     private JButton heapSortBtn;
+    private JButton quickSortButton;
     private JButton insertionSortButton;
+    private JButton shellSortButton;
 
     public AlgorithmsBar(MenuBarCallback cb) {
         this.cb = cb;
@@ -23,6 +25,7 @@ public class AlgorithmsBar extends JPanel {
         addHeapSortButton();
         addQuickSortButton();
         addInsertionSortButton();
+        addShellSortButton();
 
         setVisible(true);
     }
@@ -65,12 +68,12 @@ public class AlgorithmsBar extends JPanel {
     }
 
     public void addQuickSortButton() {
-        insertionSortButton = new JButton("QuickSort");
-        insertionSortButton.addActionListener(e -> {
+        quickSortButton = new JButton("QuickSort");
+        quickSortButton.addActionListener(e -> {
             cb.onSwitchSortingAlgorithm(SortingAlgorithmEnum.QUICK_SORT);
-            disableButton(insertionSortButton);
+            disableButton(quickSortButton);
         });
-        add(insertionSortButton);
+        add(quickSortButton);
     }
 
     public void addInsertionSortButton() {
@@ -82,12 +85,23 @@ public class AlgorithmsBar extends JPanel {
         add(insertionSortButton);
     }
 
+    public void addShellSortButton() {
+        shellSortButton = new JButton("ShellSort");
+        shellSortButton.addActionListener(e -> {
+            cb.onSwitchSortingAlgorithm(SortingAlgorithmEnum.SHELL_SORT);
+            disableButton(shellSortButton);
+        });
+        add(shellSortButton);
+    }
+
     private void disableButton(JButton button) {
         selectionSortBtn.setEnabled(true);
         bubbleSortBtn.setEnabled(true);
         mergeSortBtn.setEnabled(true);
         heapSortBtn.setEnabled(true);
+        quickSortButton.setEnabled(true);
         insertionSortButton.setEnabled(true);
+        shellSortButton.setEnabled(true);
 
         button.setEnabled(false);
     }
