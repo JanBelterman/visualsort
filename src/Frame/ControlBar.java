@@ -23,25 +23,39 @@ public class ControlBar extends JPanel {
         setVisible(true);
     }
 
-    public void addStartButton() {
+    public void disableAll() {
+        startBtn.setEnabled(false);
+        pauseBtn.setEnabled(false);
+        stopBtn.setEnabled(false);
+        resetBtn.setEnabled(false);
+    }
+
+    public void enableAll() {
+        startBtn.setEnabled(true);
+        pauseBtn.setEnabled(true);
+        stopBtn.setEnabled(true);
+        resetBtn.setEnabled(true);
+    }
+
+    private void addStartButton() {
         startBtn = new JButton("Start");
         startBtn.addActionListener(e -> cb.onStart());
         add(startBtn, FlowLayout.LEFT);
     }
 
-    public void addPauseButton() {
+    private void addPauseButton() {
         pauseBtn = new JButton("Pause");
         pauseBtn.addActionListener(e -> cb.onPause());
         add(pauseBtn);
     }
 
-    public void addStopButton() {
+    private void addStopButton() {
         stopBtn = new JButton("Stop");
         stopBtn.addActionListener(e -> cb.onStop());
         add(stopBtn);
     }
 
-    public void addResetButton() {
+    private void addResetButton() {
         resetBtn = new JButton("Reset");
         resetBtn.addActionListener(e -> cb.onRestart());
         add(resetBtn);

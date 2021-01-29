@@ -18,17 +18,27 @@ public class Panel extends JPanel {
 
     private int[] array;
 
-    public void addSortingAlgorithm(SortingAlgorithm sortingAlgorithm) {
-        elementWidth = calculateElementWidth(sortingAlgorithm.getCount(), Config.FRAME_WIDTH);
+    private SortingAlgorithm sortingAlgorithm;
+
+    public Panel () {
+        super();
 
         this.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
-                int count = sortingAlgorithm.getCount();
-                int width = e.getComponent().getWidth();
-                elementWidth = calculateElementWidth(count, width);
+                if (sortingAlgorithm != null) {
+                    int count = sortingAlgorithm.getCount();
+                    int width = e.getComponent().getWidth();
+                    elementWidth = calculateElementWidth(count, width);
+                }
             }
         });
+    }
+
+    public void addSortingAlgorithm(SortingAlgorithm sortingAlgorithm) {
+        // TODO: change to the width of the panel itself
+        this.sortingAlgorithm = sortingAlgorithm;
+        elementWidth = calculateElementWidth(sortingAlgorithm.getCount(), Config.FRAME_WIDTH);
     }
 
     // Update array & repaint
@@ -47,9 +57,13 @@ public class Panel extends JPanel {
     // draw a rectangle for every element in the array
     @Override
     public void paint(Graphics g) {
-        if (this.array != null) {
+        if (this.array != null && this.array.length > 0) {
             for (int i = 0; i < array.length; i++)
                 g.fillRect(i * elementWidth, this.getHeight() - array[i], elementWidth, array[i]);
+        } else if (sortingAlgorithm != null) {
+            g.drawString("Press start to run the algorithm", getWidth() / 2 - 100, getHeight() / 2);
+        } else {
+            g.drawString("Select a sorting algorithm on the left to start.", getWidth() / 2 - 150, getHeight() / 2);
         }
     }
 

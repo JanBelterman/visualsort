@@ -13,16 +13,13 @@ public class Manager implements MenuBarCallback {
 
     private JFrame frame;
     private Panel panel;
+    private ControlBar controlBar;
     private SortingAlgorithm sortingAlgorithm;
 
     private Thread sortingThread;
 
-    // TODO: fix that when thread == null can't click on new algorithm.
-    // TODO: fix algorithm buttons don't always work right
-    // TODO: when state == paused (enum), change start button text to resume. State machine or something nice.
-    // TODO: fix slow after some runtime
-
-    // TODO: fix always one thread active
+    // TODO: when state == paused (enum), change start button text to resume. State machine or something nice. (STATE.RUNNING (start disabled),IDLE(stop & pause disabled),PAUSED(pause disabled, start should display resume)
+    // TODO: fix slow after some runtime & make sure always one thread active and properly disposed of so not accidentally starting multiple threads (probably also need to make sure algorithms perform about the same amount of paints otherwise some will cause lag or just seem slower, do this by using less elements or smart drawing
 
     public void run() {
         frame = new JFrame();
@@ -31,23 +28,20 @@ public class Manager implements MenuBarCallback {
         frame.setSize(Config.FRAME_WIDTH, Config.FRAME_HEIGHT);
 
         panel = new Panel();
+        controlBar = new ControlBar(this);
+        controlBar.disableAll();
 
-        frame.getContentPane().add(new ControlBar(this), BorderLayout.NORTH);
+        frame.getContentPane().add(controlBar, BorderLayout.NORTH);
         frame.getContentPane().add(new AlgorithmsBar(this), BorderLayout.WEST);
         frame.getContentPane().add(panel, BorderLayout.CENTER);
         frame.setVisible(true);
-
-        sortingAlgorithm = new SelectionSort(panel);
-
-        panel.addSortingAlgorithm(sortingAlgorithm);
-
-//        frame.repaint();
-
-//        startSortingThread();
+        frame.repaint();
     }
 
     private void stopSortingThread() {
-        sortingThread.stop(); // TODO naar interrupt??
+        if (sortingThread != null) {
+            sortingThread.stop(); // TODO naar interrupt??
+        }
     }
 
     private void startSortingThread() {
@@ -59,7 +53,7 @@ public class Manager implements MenuBarCallback {
 
     private void pauseSortingThread() {
         try {
-            sortingThread.suspend(); // TODO: kan start of moet ik resume hierna doen?
+            sortingThread.suspend(); // TODO: kan start of moet ik resume hierna doen? & hoe houdt ie state bij van de array??? tuurlijk als ik continue gaat gwn die thread verder, duhh
         } catch (Exception ignored) {
 
         }
@@ -103,6 +97,10 @@ public class Manager implements MenuBarCallback {
             case INSERTION_SORT -> new InsertionSort(panel);
             case SHELL_SORT -> new ShellSort(panel);
         };
+
+        panel.addSortingAlgorithm(sortingAlgorithm);
+
+        controlBar.enableAll();
 
         panel.update(new int[]{});
         frame.repaint();

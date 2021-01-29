@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fae0e24f-a681-4902-b475-27de13e2525a" name="Default Changelist" comment="Added controls to switch sorting algorithm and restart etc.">
-      <change afterPath="$PROJECT_DIR$/src/SortingAlgorithms/ShellSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frame/AlgorithmsBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame/AlgorithmsBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frame/ControlBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame/ControlBar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frame/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/SortingAlgorithmEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame/SortingAlgorithmEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting_algorithms/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingAlgorithms/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting_algorithms/HeapSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingAlgorithms/HeapSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting_algorithms/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingAlgorithms/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting_algorithms/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingAlgorithms/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting_algorithms/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingAlgorithms/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting_algorithms/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingAlgorithms/SelectionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorting_algorithms/SortingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingAlgorithms/SortingAlgorithm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +103,7 @@
       <workItem from="1611749768449" duration="105000" />
       <workItem from="1611755987719" duration="187000" />
       <workItem from="1611829002236" duration="1895000" />
-      <workItem from="1611916756307" duration="496000" />
+      <workItem from="1611916756307" duration="3235000" />
     </task>
     <task id="LOCAL-00001" summary="Added heapsort &amp; quicksort">
       <created>1610486518624</created>
@@ -140,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611830904601</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added shellsort">
+      <created>1611917278146</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611917278146</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +163,7 @@
     <MESSAGE value="Added controls to switch sorting algorithm and restart etc." />
     <MESSAGE value="Added insertion sort" />
     <MESSAGE value="Added some future todo's" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some future todo's" />
+    <MESSAGE value="Added shellsort" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added shellsort" />
   </component>
 </project>
