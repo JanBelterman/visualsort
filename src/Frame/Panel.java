@@ -2,8 +2,6 @@ package Frame;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
 import java.io.Serial;
 
 import Config.Config;
@@ -14,31 +12,12 @@ public class Panel extends JPanel {
     @Serial
     private static final long serialVersionUID = 4236119898795955335L;
 
-    private int elementWidth;
-
     private int[] array;
 
     private SortingAlgorithm sortingAlgorithm;
 
-    public Panel () {
-        super();
-
-        this.addComponentListener(new ComponentAdapter() {
-            @Override
-            public void componentResized(ComponentEvent e) {
-                if (sortingAlgorithm != null) {
-                    int count = sortingAlgorithm.getCount();
-                    int width = e.getComponent().getWidth();
-                    elementWidth = calculateElementWidth(count, width);
-                }
-            }
-        });
-    }
-
     public void addSortingAlgorithm(SortingAlgorithm sortingAlgorithm) {
-        // TODO: change to the width of the panel itself
         this.sortingAlgorithm = sortingAlgorithm;
-        elementWidth = calculateElementWidth(sortingAlgorithm.getCount(), Config.FRAME_WIDTH);
     }
 
     // Update array & repaint
@@ -58,8 +37,10 @@ public class Panel extends JPanel {
     @Override
     public void paint(Graphics g) {
         if (this.array != null && this.array.length > 0) {
+            int elementWidth = calculateElementWidth(this.array.length, getWidth());
             for (int i = 0; i < array.length; i++)
                 g.fillRect(i * elementWidth, this.getHeight() - array[i], elementWidth, array[i]);
+
         } else if (sortingAlgorithm != null) {
             g.drawString("Press start to run the algorithm", getWidth() / 2 - 100, getHeight() / 2);
         } else {
