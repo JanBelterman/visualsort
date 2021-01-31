@@ -11,12 +11,15 @@ import java.awt.*;
 
 public class Manager implements MenuBarCallback {
 
+    // TODO: add a class that manager connectivity between panel and sorting algorithm
+    // TODO: add a ui manager that manages the redrawing when stopping, so that it should redraw on empty array
+
     private JFrame frame;
     private Panel panel;
     private ControlBar controlBar;
     private SortingAlgorithm sortingAlgorithm;
 
-    private Thread sortingThread;
+    private final ThreadManager threadManager = new ThreadManager();
 
     // TODO: when state == paused (enum), change start button text to resume. State machine or something nice. (STATE.RUNNING (start disabled),IDLE(stop & pause disabled),PAUSED(pause disabled, start should display resume)
     // TODO: fix slow after some runtime & make sure always one thread active and properly disposed of so not accidentally starting multiple threads (probably also need to make sure algorithms perform about the same amount of paints otherwise some will cause lag or just seem slower, do this by using less elements or smart drawing
@@ -38,40 +41,19 @@ public class Manager implements MenuBarCallback {
         frame.repaint();
     }
 
-    private void stopSortingThread() {
-        if (sortingThread != null) {
-            sortingThread.stop(); // TODO naar interrupt??
-        }
-    }
-
-    private void startSortingThread() {
-        sortingThread = new Thread(() -> {
-            sortingAlgorithm.run();
-        });
-        sortingThread.start();
-    }
-
-    private void pauseSortingThread() {
-        try {
-            sortingThread.suspend(); // TODO: kan start of moet ik resume hierna doen? & hoe houdt ie state bij van de array??? tuurlijk als ik continue gaat gwn die thread verder, duhh
-        } catch (Exception ignored) {
-
-        }
-    }
-
     @Override
     public void onStart() {
-        startSortingThread();
+        threadManager.startSorting(sortingAlgorithm);
     }
 
     @Override
     public void onPause() {
-        pauseSortingThread();
+        threadManager.pauseSorting();
     }
 
     @Override
     public void onStop() {
-        stopSortingThread();
+        threadManager.stopSorting();
         sortingAlgorithm.reset();
         panel.update(new int[]{});
         frame.repaint();
@@ -79,14 +61,14 @@ public class Manager implements MenuBarCallback {
 
     @Override
     public void onRestart() {
-        stopSortingThread();
+        threadManager.stopSorting();
         sortingAlgorithm.reset();
-        startSortingThread();
+        threadManager.startSorting(sortingAlgorithm);
     }
 
     @Override
     public void onSwitchSortingAlgorithm(SortingAlgorithmEnum sa) {
-        stopSortingThread();
+        threadManager.stopSorting();
 
         sortingAlgorithm = switch (sa) {
             case SELECTION_SORT -> new SelectionSort(panel);
